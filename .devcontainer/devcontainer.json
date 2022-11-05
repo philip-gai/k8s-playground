@@ -23,7 +23,8 @@
 		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
 		"ghcr.io/devcontainers/features/powershell:1": {},
 		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:1": {},
-		"ghcr.io/rchaganti/vsc-devcontainer-features/azurebicep:1": {}
+		"ghcr.io/rchaganti/vsc-devcontainer-features/azurebicep:1": {},
+		"ghcr.io/devcontainers/features/node:1": {}
 	},
 	"customizations": {
 		"vscode": {
@@ -37,7 +38,8 @@
 				"eamodio.gitlens",
 				"foxundermoon.shell-format",
 				"yzhang.markdown-all-in-one",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"ms-dotnettools.vscode-dotnet-pack"
 			]
 		}
 	}
