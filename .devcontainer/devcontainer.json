@@ -21,11 +21,6 @@
 		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
 		"ghcr.io/devcontainers/features/powershell:1": {},
 		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:1": {},
-		"ghcr.io/mpriscella/features/helm-chart-testing:1": {},
-		"ghcr.io/devcontainers-contrib/features/argo-cd:1": {},
-		"ghcr.io/devcontainers-contrib/features/kubectx-kubens:1": {},
-		"ghcr.io/devcontainers-contrib/features/kubie:1": {},
-		"ghcr.io/eitsupi/devcontainer-features/jq-likes:0": {},
 		"ghcr.io/rchaganti/vsc-devcontainer-features/azurebicep:1": {}
 	}
 }
