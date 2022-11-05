@@ -36,7 +36,8 @@
 				"GitHub.copilot",
 				"eamodio.gitlens",
 				"foxundermoon.shell-format",
-				"yzhang.markdown-all-in-one"
+				"yzhang.markdown-all-in-one",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
