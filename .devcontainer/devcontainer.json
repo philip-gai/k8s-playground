@@ -35,7 +35,8 @@
 				"ms-kubernetes-tools.vscode-aks-tools",
 				"GitHub.copilot",
 				"eamodio.gitlens",
-				"foxundermoon.shell-format"
+				"foxundermoon.shell-format",
+				"yzhang.markdown-all-in-one"
 			]
 		}
 	}
