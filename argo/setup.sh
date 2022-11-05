@@ -28,5 +28,11 @@ echo "ArgoCD IP Address: $ipAddress"
 echo "Logging in via CLI"
 argocd login $ipAddress --username admin --password $password --insecure
 
+kubectl config set-context --current --namespace=argocd
+
+# Create a new application
+echo "Creating a new application"
+argocd app create guestbook --repo https://github.com/philip-gai/k8s-playground.git --path manifests/helm-guestbook --dest-server https://kubernetes.default.svc --dest-namespace default
+
 # Open Argo CD UI
 echo "Open Argo CD UI by navigating to http://$ipAddress in your browser"
