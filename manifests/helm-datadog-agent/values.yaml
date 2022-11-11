@@ -1,0 +1,40 @@
+# Datadog Agent with Logs, APM, Processes, and System Probe enabled
+# with specific configuration to work on AKS.
+
+# Install: helm install datadog-agent -f values.yaml datadog/datadog
+# Upgrade: helm upgrade datadog-agent -f values.yaml datadog/datadog
+
+targetSystem: "linux"
+datadog:
+  apiKeyExistingSecret: datadog
+  appKeyExistingSecret: datadog
+  clusterName: kube-playground
+  tags: []
+  kubelet:
+    host:
+      valueFrom:
+        fieldRef:
+          fieldPath: spec.nodeName
+    hostCAPath: /etc/kubernetes/certs/kubeletserver.crt
+    tlsVerify: false # Required as of Agent 7.35 because Kubelet certificates in AKS do not have a Subject Alternative Name (SAN) set.
+  kubeStateMetricsCore:
+    enabled: true
+  # logs:
+  #   enabled: true
+  #   containerCollectAll: false
+  #   containerCollectUsingFiles: true
+  # apm:
+  #   portEnabled: true
+  #   socketPath: /var/run/datadog/apm.socket
+  #   hostSocketPath: /var/run/datadog/
+  # processAgent:
+  #   enabled: true
+  #   processCollection: false
+  systemProbe:
+    enableTCPQueueLength: false
+    enableOOMKill: true
+    collectDNSStats: false
+
+clusterAgent:
+  replicas: 2
+  createPodDisruptionBudget: true
